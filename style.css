@@ -11,6 +11,35 @@
 	--card-radius: 14px;
 }
 
+.message.lose {
+  color: var(--danger);
+  animation: shake 0.4s;
+}
+.btn.clicked {
+  transform: scale(0.92);
+}
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  50% { transform: translateX(6px); }
+  75% { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
+}
+.message {
+  min-height:28px;
+  margin-top:18px;
+  font-weight:600;
+  font-size:16px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.message.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
